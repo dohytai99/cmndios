@@ -1,0 +1,30 @@
+workflows:
+  simulator-native-ios:
+    name: iOS simulator build
+    working_directory: exemple
+    max_build_duration: 120
+    instance_type: mac_mini_m2
+    environment:
+      vars:
+        XCODE_WORKSPACE: "Runner.xcworkspace"
+        XCODE_SCHEME: "Runner"
+        xcode: 15.0
+        cocoapods: default
+    scripts:
+      
+    
+ 
+          
+    - name: Build the .app
+      script:
+         flutter pub get
+         flutter run
+    
+            -configuration Debug \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO 
+    artifacts:
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM

@@ -21,6 +21,15 @@ dependencies:
   pointycastle: ^3.7.4
   diffie_hellman: ^0.1.2
   crypto_keys_plus: ^0.4.0 # till cypto_keys lib is not updated
+    flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_platform_widgets: ^3.3.5
+  intl: ^0.19.0
+    cupertino_icons: ^1.0.3
+  expandable: ^5.0.1
+  logging: ^1.0.2
 
 dev_dependencies:
   flutter:      # needed for flutter_nfc_kit
@@ -30,3 +39,13 @@ dev_dependencies:
     sdk: flutter
   lints: ^2.0.0
   test: ^1.16.5
+  
+
+  flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  
